@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 /**
  * Created by Cristian on 9/22/2018.
@@ -26,6 +27,10 @@ public class SpringMain {
             Source source = new Source();
             source.setAmount("123");
             source.setAmountAmount(new Amount(new BigDecimal("123"), "EUR", "12333"));
+
+            source.setAmounts(
+                    Arrays.asList(new Amount(new BigDecimal("444"), "DDD", "1231"),
+                    new Amount(new BigDecimal("555"), "EE", "1231")));
             Destination dest = new Destination();
 
             modelMapper.map(source, dest);

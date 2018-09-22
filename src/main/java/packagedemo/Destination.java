@@ -1,6 +1,9 @@
 package packagedemo;
 
+import packagedemo.anotherModel.SameType;
+
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * Created by Cristian on 9/22/2018.
@@ -8,6 +11,9 @@ import java.math.BigDecimal;
 public class Destination {
     private String amount;
     private BigDecimal amountBig;
+
+    private List<Amount> amounts;
+    private SameType type;
 
 
     public String getAmount() {
@@ -26,12 +32,29 @@ public class Destination {
         this.amountBig = amountBig;
     }
 
+    public List<Amount> getAmounts() {
+        return amounts;
+    }
+
+    public void setAmounts(List<Amount> amounts) {
+        this.amounts = amounts;
+    }
+
+    public SameType getType() {
+        return type;
+    }
+
+    public void setType(SameType type) {
+        this.type = type;
+    }
 
     @Override
     public String toString() {
-        return "packagedemo.Destination{" +
+        return "Destination{" +
                 "amount='" + amount + '\'' +
                 ", amountBig=" + amountBig +
+                ", amounts=" + amounts +
+                ", type=" + type +
                 '}';
     }
 }

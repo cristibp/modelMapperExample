@@ -1,5 +1,7 @@
 package packagedemo;
 
+import packagedemo.model.SameType;
+
 import java.util.List;
 
 /**
@@ -8,6 +10,9 @@ import java.util.List;
 public class Source {
     private String amount;
     private Amount amountAmount;
+
+    private List<Amount> amounts;
+    private SameType type;
 
     public String getAmount() {
         return amount;
@@ -23,5 +28,21 @@ public class Source {
 
     public void setAmountAmount(Amount amountAmount) {
         this.amountAmount = amountAmount;
+    }
+
+    public List<Amount> getAmounts() {
+        return amounts;
+    }
+
+    public void setAmounts(List<Amount> amounts) {
+        this.amounts = amounts;
+    }
+
+    public SameType getType() {
+        return type;
+    }
+
+    public void setType(SameType type) {
+        this.type = type;
     }
 }

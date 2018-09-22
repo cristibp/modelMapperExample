@@ -40,4 +40,13 @@ public class Amount {
     public void setAnotherProperty(String anotherProperty) {
         this.anotherProperty = anotherProperty;
     }
+
+    @Override
+    public String toString() {
+        return "Amount{" +
+                "value=" + value +
+                ", currencyCode='" + currencyCode + '\'' +
+                ", anotherProperty='" + anotherProperty + '\'' +
+                '}';
+    }
 }
